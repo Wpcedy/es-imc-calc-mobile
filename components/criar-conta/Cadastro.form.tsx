@@ -4,7 +4,6 @@ import { Dimensions, StyleSheet, Text, TextInput, TouchableOpacity, View } from 
 export default function LoginForm(props: any) {
     return <View style={styles.container}>
         <View style={styles.fields}>
-            <View style={styles.filler}></View>
             <TextInput
                 style={styles.input}
                 placeholder='nome de usuário'
@@ -17,29 +16,21 @@ export default function LoginForm(props: any) {
                 autoCapitalize="none"
                 allowFontScaling={true}
                 secureTextEntry={true} />
-            <TouchableOpacity
-                style={styles.forgetPasswordLink}
-                onPress={() => alert('Esqueci a senha!')}
-            >
-                <Text style={styles.accountActionText}>
-                    Esqueci a senha
-                </Text>
-            </TouchableOpacity>
             <View style={styles.filler}></View>
         </View>
         <View style={styles.actions}>
             <TouchableOpacity
                 style={styles.btnLogin}
-                onPress={() => props.navigation.navigate("Home")}
+                onPress={() => props.navigation.navigate("Login")}
             >
-                <Text style={styles.btnLoginText}>Entrar</Text>
+                <Text style={styles.btnLoginText}>Cadastrar</Text>
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.createAccountLink}
-                onPress={() => props.navigation.navigate("CriarConta")}
+                onPress={() => props.navigation.navigate("Login")}
             >
                 <Text style={styles.accountActionText}>
-                    Criar minha conta
+                    Voltar para o Login
                 </Text>
             </TouchableOpacity>
         </View>

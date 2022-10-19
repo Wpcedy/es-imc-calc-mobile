@@ -8,6 +8,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import CriarConta from './components/criar-conta/CriarConta.page';
+
 function Home(props) {
   const { navigation } = props;
 
@@ -35,6 +37,7 @@ export default function App() {
             }}>
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="CriarConta" component={CriarConta} />
           </Stack.Navigator>
         </NavigationContainer>
         <StatusBar style="auto" />
